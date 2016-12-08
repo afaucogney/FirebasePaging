@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+apply from: "../common/constants.gradle"
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "24.0.3"
+    defaultConfig {
+        applicationId "com.example.afaucogney.firebasepaging"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.7
+        sourceCompatibility 1.7
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.google.code.findbugs', module: 'jsr305'
+    })
+    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.android.support:design:25.0.1'
+    testCompile 'junit:junit:4.12'
+
+    compile "com.google.android.gms:play-services-auth:$firebase_version"
+    compile "com.google.firebase:firebase-auth:$firebase_version"
+    compile "com.google.firebase:firebase-database:$firebase_version"
+    compile "com.google.firebase:firebase-storage:$firebase_version"
+    // Single target that includes all FirebaseUI libraries above
+    compile "com.firebaseui:firebase-ui:$firebase_ui_version"
+
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+
+    compile 'com.kelvinapps:rxfirebase:0.0.15'
+
+    compile 'frankiesardo:icepick:3.2.0'
+    provided 'frankiesardo:icepick-processor:3.2.0'
+
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxjava:1.2.1'
+    compile 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+    compile 'com.artemzin.rxjava:proguard-rules:1.1.10.0'
+    compile 'com.trello:rxlifecycle:0.8.0'
+    compile 'com.trello:rxlifecycle-android:0.8.0'
+    compile 'com.trello:rxlifecycle-components:0.8.0'
+
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.0.4'
+}
+
+apply plugin: 'com.google.gms.google-services'

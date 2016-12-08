@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "849070043837",
+    "firebase_url": "https://test-sandbox-cb9df.firebaseio.com",
+    "project_id": "test-sandbox-cb9df",
+    "storage_bucket": "test-sandbox-cb9df.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:849070043837:android:c94608dc75f90922",
+        "android_client_info": {
+          "package_name": "com.example.afaucogney.firebasepaging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "849070043837-1a1a5tb2nun6m1clm46dts7o42sphfos.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXSvZ_UZVp4yhP78KKRSahEiQKtlHzEGg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
